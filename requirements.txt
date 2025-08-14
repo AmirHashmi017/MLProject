@@ -1,20 +1,9 @@
-option_settings:
-  "aws:elasticbeanstalk:container:python":
-    WSGIPath: application:application
-
-commands:
-  # Clean temporary directories
-  01_clean_tmp:
-    command: "rm -rf /tmp/* /var/tmp/*"
-
-  # Clean old log files
-  02_clean_logs:
-    command: "find /var/log -type f -name '*.log' -delete"
-
-  # Upgrade pip
-  03_upgrade_pip:
-    command: "/opt/python/run/venv/bin/pip install --upgrade pip"
-
-  # Install requirements
-  04_install_requirements:
-    command: "/opt/python/run/venv/bin/pip install -r /var/app/staging/requirements.txt"
+pandas
+numpy
+seaborn
+scikit-learn
+xgboost
+catboost
+dill
+flask
+# -e .
